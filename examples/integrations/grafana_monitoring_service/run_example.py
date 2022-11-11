@@ -45,7 +45,7 @@ def check_dataset(
             return
 
     logging.info("Download dataset %s", dataset_name)
-    run_script(cmd=["scripts/prepare_datasets.py", "-d", dataset_name, "-p", dataset_path], wait=True)
+    run_script(cmd=["python", "scripts/prepare_datasets.py", "-d", dataset_name, "-p", dataset_path], wait=True)
 
 
 def download_test_datasets(force: bool):
@@ -80,7 +80,7 @@ def run_script(cmd: list, wait: bool) -> None:
 
 
 def send_data_requests():
-    os.system("scripts/example_run_request.py")
+    os.system("python scripts/example_run_request.py")
 
 
 def stop_docker_compose():
