@@ -35,8 +35,8 @@ conda activate evidently-grafana
 if [ $? -ne 0 ]; then
    	echo "environment does not exist"
 	echo "creating conda environment"
-	conda env create -f workflow/minimal_env.yml
-	conda activate tps_workflow
+	conda env create -f environment.yml
+	conda activate evidently-grafana
 fi
 echo "environment activated"
 
